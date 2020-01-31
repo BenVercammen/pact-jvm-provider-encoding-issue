@@ -1,0 +1,50 @@
+{
+  "consumer": {
+    "name": "frontend"
+  },
+  "provider": {
+    "name": "backend"
+  },
+  "interactions": [
+    {
+      "description": "Update Address request (ISO-8859-1)",
+      "providerState": "Address with ID exists",
+      "request": {
+        "method": "PUT",
+        "path": "/address/1",
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Accept": "application/json, text/plain, */*",
+          "Accept-Encoding": "gzip, deflate, br"
+        },
+        "body": {
+          "country": "België"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "body": {
+            "country": "België"
+
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          },
+          "$.body.country": {
+            "match": "type"
+          }
+        }
+      },
+      "metadata": null
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  }
+}

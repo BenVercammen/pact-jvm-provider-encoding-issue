@@ -7,7 +7,7 @@
   },
   "interactions": [
     {
-      "description": "Update Address request",
+      "description": "Update Address request (UTF-8)",
       "providerState": "Address with ID exists",
       "request": {
         "method": "PUT",
